@@ -10,8 +10,11 @@ import axios from 'axios';
 import copy from 'copy-to-clipboard';
 
 import {render as renderAmis, ToastComponent, AlertComponent} from 'amis';
+
 import {alert, confirm} from 'amis/lib/components/Alert';
 import {toast} from 'amis/lib/components/Toast';
+
+import './CustomizeFormItem';
 
 // amis 环境配置
 const env = {
@@ -117,6 +120,12 @@ class AMISComponent extends React.Component<any, any> {
               name: 'email',
               type: 'email',
               label: '邮箱：'
+            },
+            {
+              name: 'customize',
+              type: 'customize',
+              label: '自定义',
+              value: '123'
             }
           ]
         }
